@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from .context import sample
+from .context import urlpath
 
 import unittest
 
@@ -8,9 +8,8 @@ import unittest
 class AdvancedTestSuite(unittest.TestCase):
     """Advanced test cases."""
 
-    def test_thoughts(self):
-        self.assertIsNone(sample.hmm())
-
+    def test_one_level(self):
+        self.assertEqual(urlpath.getUrlPath('http://www.example.com/hello/'), 'hello')
 
 if __name__ == '__main__':
     unittest.main()
