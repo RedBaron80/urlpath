@@ -4,7 +4,11 @@ kind: Deployment
 metadata:
   labels:
     app: urlpath
+  name: urlpath
 spec:
+  selector:
+    matchLabels:
+      app: urlpath
   template:
     metadata:
       labels:

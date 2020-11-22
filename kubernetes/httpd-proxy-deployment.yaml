@@ -6,6 +6,9 @@ metadata:
     app: httpd-proxy
   name: httpd-proxy
 spec:
+  selector:
+    matchLabels:
+      app: httpd-proxy
   template:
     metadata:
       labels:
