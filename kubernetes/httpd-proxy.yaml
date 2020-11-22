@@ -1,0 +1,20 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: httpd-proxy
+  name: httpd-proxy
+spec:
+  template:
+    metadata:
+      labels:
+        app: httpd-proxy
+    spec:
+      containers:
+      - image: httpd-proxy:1.0
+        imagePullPolicy: Never
+        name: httpd-proxy
+        ports:
+        - containerPort: 80
+          protocol: TCP

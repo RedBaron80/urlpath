@@ -1,0 +1,12 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          serviceName: urlpath
+          servicePort: 3000
+        path: /
+        pathType: Prefix

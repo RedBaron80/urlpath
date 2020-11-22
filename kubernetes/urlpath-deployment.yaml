@@ -1,0 +1,19 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: urlpath
+spec:
+  template:
+    metadata:
+      labels:
+        app: urlpath
+    spec:
+      containers:
+      - image: urlpath:1.0
+        imagePullPolicy: IfNotPresent
+        name: urlpath
+        ports:
+        - containerPort: 3000
+          protocol: TCP
