@@ -5,5 +5,4 @@ def index(request):
     url = request.build_absolute_uri()
     # Using Django's request.get_full_path() would also work
     path=getUrlPath(url)
-    print (path)
-    return HttpResponse(path)
+    return HttpResponse(path+'\n')

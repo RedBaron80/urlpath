@@ -12,4 +12,4 @@ def removeFirstAndLastSlash(path):
     return ''.join(pathlist)
 
 def getUrlPath(url):    
-    return removeFirstAndLastSlash(urlparse(url).path)+'\n'
+    return removeFirstAndLastSlash(urlparse(url).path)
