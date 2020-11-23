@@ -101,6 +101,8 @@ No.
 
 ### What do we need to install this application in a production-ready infrastructure?
 * We must not use Django's development server for production-use and debug mode. We should use and apache or nginx's wsgi modules instead.
+* Images sizes should be improved.
+* A docker registry should be used rather than local images.
 * The infrastructure should be high availability, now everything is installed in a single node.
 * We haven't tested the performance of the application. Django has a module that gets the url path out of the box. Maybe it is more efficient?
 * The installation should be done with a configuration management tool like Ansible rather than a bash script.
