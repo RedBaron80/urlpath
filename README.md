@@ -14,7 +14,7 @@ That's it.
 
 Wait a few minutes for the script to finish and then go to the server public IP address to check that it's working `http://<ip>/hello`
 
-# Components
+# Components
 Explanation of the python-django application, the proxy and the kubernetes files
 
 ## Urlpath - app
@@ -70,7 +70,7 @@ httpd-proxy   NodePort   10.43.4.60   <none>        80:31030/TCP   15h
 ubuntu@ip-172-31-16-184:~$ curl http://localhost:31030/hello
 hello
 ```
-Bear in mind that the service external port is random. So we would have to open that port in the firewall to access the application. This is not very convenient. In order to solve that, ingress come to the rescue.
+Bear in mind that the service external port is random. So we would have to open that port in the firewall to access the application. This is not very convenient. In order to solve that, ingress comes to the rescue.
 
 ### Ingress
 K3s comes with Traefik ingress out of the box. We can access our urlpath service directly, and the ingress controller would act as a reverse proxy.
