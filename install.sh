@@ -24,3 +24,4 @@ kubectl apply -f urlpath-master/kubernetes/urlpath-deployment.yaml
 kubectl apply -f urlpath-master/kubernetes/httpd-proxy-service.yaml
 kubectl apply -f urlpath-master/kubernetes/urlpath-service.yaml
 kubectl apply -f urlpath-master/kubernetes/ingress.yaml
+echo "Done!!"
